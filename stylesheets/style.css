@@ -164,14 +164,11 @@ a.btn-zillow, .btn-zillow {
   padding: 10px 30px;
   margin: 5px 0;
   color: #fff;
-  text-shadow: none;
+  border: 1px dotted #fff;
   font-size: 1em !important;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  -webkit-box-shadow: 2px 2px 10px 0px rgba(33,33,33,0.5);
-  -moz-box-shadow:    2px 2px 10px 0px rgba(33,33,33,0.5);
-  box-shadow:         2px 2px 10px 0px rgba(33,33,33,0.5);
 }
 a.btn-redfin, .btn-redfin {
 	background-color: #A02021;
@@ -197,6 +194,7 @@ a.btn-zillow:hover, .btn-zillow:hover{
   -webkit-box-shadow: none;
   -moz-box-shadow:    none;
   box-shadow:         none;
+  border: 1px solid #fff;
 }
 /* $ICONS
 ================================================== */
@@ -216,7 +214,7 @@ a.btn-zillow:hover, .btn-zillow:hover{
 	text-align: center;
   -webkit-box-shadow: 3px 3px 15px 0px rgba(33,33,33,0.5);
   -moz-box-shadow:    3px 3px 15px 0px rgba(33,33,33,0.5);
-  box-shadow:         3px 3px 15px 0px rgba(33,33,33,0.5);
+  box-shadow:         3px 3px 15px 0px rgba(0,0,0,0.8);
 }
 .label-new {
 	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.5, #181818), color-stop(0.5, #303030));
