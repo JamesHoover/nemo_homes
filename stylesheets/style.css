@@ -63,8 +63,9 @@ a:hover {text-decoration: underline;}
 ================================================== */
 main {padding: 25px 0;}
 
-.dark-blue { color: #34495E;}
-.email {text-decoration: underline; cursor: pointer;}
+.dark-blue {color: #34495E;}
+.email       {text-decoration: none; cursor: pointer; border-bottom: 1px dotted white; word-wrap: break-word;}
+.email:hover {text-decoration: none; cursor: pointer; border-bottom: 2px solid white;}
 
 /* $NAVIGATION
 ================================================== */
@@ -94,11 +95,12 @@ a.current {
   padding-top: 50px;
   text-align: center;
 }
-.home-nav {margin: 25px 0; font-size: 1.2em;}
+.home-nav {padding: 25px 0; font-size: 1.2em;}
 .home-nav li {
   display: inline;
 }
 .home-nav a {color: #34495E;}
+
 /* $PROJECTS
 ================================================== */
 .project-block {
@@ -122,6 +124,7 @@ a.current {
 
 /* $CONTACT
 ================================================== */
+.contact-block {margin-bottom: 25px;}
 .contact-info,
 .contact-img {
   height: 500px;
@@ -130,6 +133,7 @@ a.current {
   justify-content: center;
   text-align: center;
   color: #fff;
+  margin-bottom: 25px;
 }
 .contact-info {
   background: #34495E; color: #fff;
@@ -144,16 +148,17 @@ a.current {
 
 /* $FOOTER
 ================================================== */
-footer {padding: 25px 0; background: #34495E; color: #fff;}
-/* Uses flexbox to push footer */
-.site {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+footer, .footer-push {
+  height: 50px; /* .push must be the same height as .footer */
 }
-.site-content {flex: 1;}
-.copyright {text-align: center;}
+footer {background: #34495E; color: #fff; clear: both;}
+/* Uses flexbox to push footer */
+.wrapper {
+  height: 100%;
+  margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+}
 
+.copyright {text-align: center; padding-top: 20px;}
 
 /* $BUTTONS
 ================================================== */
@@ -164,7 +169,7 @@ a.btn-zillow, .btn-zillow {
   padding: 10px 30px;
   margin: 5px 0;
   color: #fff;
-  border: 1px dotted #fff;
+
   font-size: 1em !important;
   text-decoration: none;
   text-transform: uppercase;
@@ -194,7 +199,7 @@ a.btn-zillow:hover, .btn-zillow:hover{
   -webkit-box-shadow: none;
   -moz-box-shadow:    none;
   box-shadow:         none;
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
 }
 /* $ICONS
 ================================================== */
@@ -267,7 +272,7 @@ a.btn-zillow:hover, .btn-zillow:hover{
 /* Makes row on page centered of specified width */
 .row {
   zoom: 1;
-  width: 1080px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 /* row that takes full width of page */
@@ -339,6 +344,7 @@ a.btn-zillow:hover, .btn-zillow:hover{
 @media screen and (min-width: 0) and (max-width: 40.4em){
   .row {
     max-width: 100%;
+    /* Dont set top or bottom padding to 0 */
     padding-left: 5%;
     padding-right: 5%;
   }
@@ -360,37 +366,40 @@ a.btn-zillow:hover, .btn-zillow:hover{
     margin: 0;
     width: 100%
   }
-  .project-block {margin-bottom: 25px;}
+  .project-block, 
+  .contact-block {margin-bottom: 25px;}
 }
 @media screen and (min-width: 40.5em) and (max-width: 63.9em){
   .row {
     max-width: 100%;
+    /* Dont set top or bottom padding to 0 */
     padding-left: 5%;
     padding-right: 5%;
   }
-  .one-sixth,
-  .one-fifth,`
-  .one-fourth,
   .one-third,
+  .two-thirds {width: 47.916666666667%;}
+  .one-sixth,
+  .one-fifth,
+  .one-fourth,
   .two-sixths,
   .two-fifths,
   .one-half,
   .two-fourths,
   .three-sixths {width: 47.916666666667%;}
   .three-fifths,  
-  .two-thirds,
   .four-sixths,   
   .three-fourths, 
   .four-fifths,   
   .five-sixths  {width: 100%}
 
-	.project-block {margin-bottom: 25px;}
+	.project-block,
+  .contact-block {margin-bottom: 25px;}
   /* 50% width causes two units per line so center the last odd unit */
   .last.third-width, .last.fifth-width {clear:both; width:50%; margin: 0 auto;}
 }
 @media screen and (min-width: 64em){
-
   .last.third-width {clear:none; width: 33.333%;}
   .last.fifth-width {clear:none; width: 20%;}
-  .project-block {margin-bottom: 25px;}
+  .project-block,
+  .contact-block {margin-bottom: 25px;}
 }
