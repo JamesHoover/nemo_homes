@@ -73,7 +73,7 @@ header {padding: 25px 0; color: #fff; background: #34495E;}
 .site-logo h5 {display: inline-block;}
 a.site-logo {padding-left: 0;}
 nav ul {}
-nav li {display: inline; padding-right: 25px;}
+nav li {display: inline;}
 nav li:last-of-type {padding-right: 0;}
 nav a {color: #fff; padding: 10px;}
 a.current {
@@ -92,14 +92,12 @@ a.current {
 /* $HOME
 ================================================== */
 .home-info {
-  padding-top: 50px;
+  padding-top: 5%;
   text-align: center;
 }
-.home-nav {padding: 25px 0; font-size: 1.2em;}
-.home-nav li {
-  display: inline;
-}
-.home-nav a {color: #34495E;}
+.home-nav    {padding: 25px 0; font-size: 1.2em;}
+.home-nav li {display: inline;}
+.home-nav a  {color: #34495E;}
 
 /* $PROJECTS
 ================================================== */
@@ -127,15 +125,13 @@ a.current {
 .contact-block {margin-bottom: 25px;}
 .contact-info,
 .contact-img {
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 100%;
   text-align: center;
   color: #fff;
   margin-bottom: 25px;
 }
 .contact-info {
+  padding: 10% 0;
   background: #34495E; color: #fff;
   -webkit-box-shadow: 10px 10px 10px 0px rgba(204,204,204,1);
   -moz-box-shadow:    10px 10px 10px 0px rgba(204,204,204,1);
@@ -152,7 +148,6 @@ footer, .footer-push {
   height: 50px; /* .push must be the same height as .footer */
 }
 footer {background: #34495E; color: #fff; clear: both;}
-/* Uses flexbox to push footer */
 .wrapper {
   height: 100%;
   margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
@@ -368,6 +363,7 @@ a.btn-zillow:hover, .btn-zillow:hover{
   }
   .project-block, 
   .contact-block {margin-bottom: 25px;}
+  .site-logo {display: none;}
 }
 @media screen and (min-width: 40.5em) and (max-width: 63.9em){
   .row {
