@@ -72,7 +72,6 @@ main {padding: 25px 0;}
 header {padding: 25px 0; color: #fff; background: #34495E;}
 .site-logo h5 {display: inline-block;}
 a.site-logo {padding-left: 0;}
-nav ul {}
 nav li {display: inline;}
 nav li:last-of-type {padding-right: 0;}
 nav a {color: #fff; padding: 10px;}
@@ -337,6 +336,12 @@ a.btn-zillow:hover, .btn-zillow:hover{
 /* Mobile first. Using relative units */
 /*28.75em*/
 @media screen and (min-width: 0) and (max-width: 40.4em){
+  
+  .site-logo {display: none;}
+  .project-block, 
+  .contact-block {margin-bottom: 25px;}
+  nav li {padding: 0;}
+
   .row {
     max-width: 100%;
     /* Dont set top or bottom padding to 0 */
@@ -361,9 +366,7 @@ a.btn-zillow:hover, .btn-zillow:hover{
     margin: 0;
     width: 100%
   }
-  .project-block, 
-  .contact-block {margin-bottom: 25px;}
-  .site-logo {display: none;}
+
 }
 @media screen and (min-width: 40.5em) and (max-width: 63.9em){
   .row {
@@ -390,6 +393,7 @@ a.btn-zillow:hover, .btn-zillow:hover{
 
 	.project-block,
   .contact-block {margin-bottom: 25px;}
+  nav li {padding: 0px;}
   /* 50% width causes two units per line so center the last odd unit */
   .last.third-width, .last.fifth-width {clear:both; width:50%; margin: 0 auto;}
 }
@@ -398,4 +402,5 @@ a.btn-zillow:hover, .btn-zillow:hover{
   .last.fifth-width {clear:none; width: 20%;}
   .project-block,
   .contact-block {margin-bottom: 25px;}
+  nav li {padding: 25px;}
 }
